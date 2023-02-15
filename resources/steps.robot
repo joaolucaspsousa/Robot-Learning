@@ -2,10 +2,13 @@
 Library     AppiumLibrary
 
 
+*** Variables ***
+${TIME_OUT}    10s
+
 *** Keywords ***
 ShowBalance
     Click Element    accessibility_id=show-balance
-    Wait Until Element Is Visible    accessibility_id=user-balance    timeout=10s
+    Wait Until Element Is Visible    accessibility_id=user-balance    timeout=${TIME_OUT}
 
 BalanceExpected
     [Arguments]    ${value}
