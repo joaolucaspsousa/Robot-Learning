@@ -1,7 +1,6 @@
 *** Settings ***
 Library     AppiumLibrary
-Resource    ./steps.robot
-
+Resource    ../steps/balance_steps.robot
 
 *** Variables ***
 ${APPIUM_SERVER}        http://localhost:4723/wd/hub
@@ -11,7 +10,6 @@ ${PLATFORM_VERSION}     8.0
 ${DEVICE_NAME}          Pixel 6 PRO API 33
 ${APP}                  C:\\Users\\João Lucas\\Desktop\\Robot-Learning\\app\\nuclone.apk
 ${UDID}                 emulator-5554
-
 
 *** Keywords ***
 Open App

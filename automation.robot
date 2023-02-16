@@ -1,12 +1,12 @@
 *** Settings ***
 Library             AppiumLibrary
-Resource            resources/base.robot
+Resource            resources/settings.resource
+Resource            steps/balance_steps.robot
 
 Test Setup          Open App
 Test Teardown       Close App
 
-
 *** Test Cases ***
-ViewBalance
+TC01: ViewBalance
     ShowBalance
-    BalanceExpected    R$ 5.500,00
+    BalanceExpected    ${DICIONARY.value_expected}
